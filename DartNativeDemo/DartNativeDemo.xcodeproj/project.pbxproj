@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		15FFDE8728F55FCD00477FCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FFDE8628F55FCD00477FCC /* AppDelegate.swift */; };
+		15FFDE8928F55FCD00477FCC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FFDE8828F55FCD00477FCC /* SceneDelegate.swift */; };
+		15FFDE8B28F55FCD00477FCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FFDE8A28F55FCD00477FCC /* ViewController.swift */; };
+		15FFDE8E28F55FCD00477FCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15FFDE8C28F55FCD00477FCC /* Main.storyboard */; };
+		15FFDE9028F55FCE00477FCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15FFDE8F28F55FCE00477FCC /* Assets.xcassets */; };
+		15FFDE9328F55FCE00477FCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15FFDE9128F55FCE00477FCC /* LaunchScreen.storyboard */; };
+		15FFDE9B28F56B5200477FCC /* SingleFlutterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FFDE9A28F56B5200477FCC /* SingleFlutterViewController.swift */; };
+		15FFDE9D28F56BB600477FCC /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FFDE9C28F56BB600477FCC /* DataModel.swift */; };
+		15FFDE9F28F56C0A00477FCC /* DoubleFlutterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FFDE9E28F56C0A00477FCC /* DoubleFlutterViewController.swift */; };
+		15FFDEA528F584D700477FCC /* CommonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FFDEA428F584D700477FCC /* CommonService.swift */; };
+		A4CA5C7463EDF026AB8BEB6E /* Pods_DartNativeDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C794EBB2F921629CAFBA0173 /* Pods_DartNativeDemo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		15FFDE8328F55FCD00477FCC /* DartNativeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DartNativeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		15FFDE8628F55FCD00477FCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		15FFDE8828F55FCD00477FCC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		15FFDE8A28F55FCD00477FCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		15FFDE8D28F55FCD00477FCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		15FFDE8F28F55FCE00477FCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		15FFDE9228F55FCE00477FCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		15FFDE9428F55FCE00477FCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15FFDE9A28F56B5200477FCC /* SingleFlutterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleFlutterViewController.swift; sourceTree = "<group>"; };
+		15FFDE9C28F56BB600477FCC /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		15FFDE9E28F56C0A00477FCC /* DoubleFlutterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleFlutterViewController.swift; sourceTree = "<group>"; };
+		15FFDEA428F584D700477FCC /* CommonService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonService.swift; sourceTree = "<group>"; };
+		5BA554EB9C5C993381AE180B /* Pods-DartNativeDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DartNativeDemo.debug.xcconfig"; path = "Target Support Files/Pods-DartNativeDemo/Pods-DartNativeDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		B422FBC9F512A0E618580D7D /* Pods-DartNativeDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DartNativeDemo.release.xcconfig"; path = "Target Support Files/Pods-DartNativeDemo/Pods-DartNativeDemo.release.xcconfig"; sourceTree = "<group>"; };
+		C794EBB2F921629CAFBA0173 /* Pods_DartNativeDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DartNativeDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15FFDE8028F55FCD00477FCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4CA5C7463EDF026AB8BEB6E /* Pods_DartNativeDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09C0E7BB4970E7F9DDD67224 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C794EBB2F921629CAFBA0173 /* Pods_DartNativeDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		15FFDE7A28F55FCD00477FCC = {
+			isa = PBXGroup;
+			children = (
+				15FFDE8528F55FCD00477FCC /* DartNativeDemo */,
+				15FFDE8428F55FCD00477FCC /* Products */,
+				7A15292ED9D42412BCFE70A1 /* Pods */,
+				09C0E7BB4970E7F9DDD67224 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		15FFDE8428F55FCD00477FCC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				15FFDE8328F55FCD00477FCC /* DartNativeDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		15FFDE8528F55FCD00477FCC /* DartNativeDemo */ = {
+			isa = PBXGroup;
+			children = (
+				15FFDE8628F55FCD00477FCC /* AppDelegate.swift */,
+				15FFDE8828F55FCD00477FCC /* SceneDelegate.swift */,
+				15FFDEA428F584D700477FCC /* CommonService.swift */,
+				15FFDE8A28F55FCD00477FCC /* ViewController.swift */,
+				15FFDE9A28F56B5200477FCC /* SingleFlutterViewController.swift */,
+				15FFDE9E28F56C0A00477FCC /* DoubleFlutterViewController.swift */,
+				15FFDE9C28F56BB600477FCC /* DataModel.swift */,
+				15FFDE8C28F55FCD00477FCC /* Main.storyboard */,
+				15FFDE8F28F55FCE00477FCC /* Assets.xcassets */,
+				15FFDE9128F55FCE00477FCC /* LaunchScreen.storyboard */,
+				15FFDE9428F55FCE00477FCC /* Info.plist */,
+			);
+			path = DartNativeDemo;
+			sourceTree = "<group>";
+		};
+		7A15292ED9D42412BCFE70A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5BA554EB9C5C993381AE180B /* Pods-DartNativeDemo.debug.xcconfig */,
+				B422FBC9F512A0E618580D7D /* Pods-DartNativeDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		15FFDE8228F55FCD00477FCC /* DartNativeDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15FFDE9728F55FCE00477FCC /* Build configuration list for PBXNativeTarget "DartNativeDemo" */;
+			buildPhases = (
+				182C953A158BEE7CA5E3DA5F /* [CP] Check Pods Manifest.lock */,
+				B883FC40C231AF596AAF68EC /* [CP-User] Run Flutter Build flutter_module Script */,
+				15FFDE7F28F55FCD00477FCC /* Sources */,
+				15FFDE8028F55FCD00477FCC /* Frameworks */,
+				15FFDE8128F55FCD00477FCC /* Resources */,
+				ECAFE546794D372F60743D8F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DartNativeDemo;
+			productName = DartNativeDemo;
+			productReference = 15FFDE8328F55FCD00477FCC /* DartNativeDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		15FFDE7B28F55FCD00477FCC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					15FFDE8228F55FCD00477FCC = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 15FFDE7E28F55FCD00477FCC /* Build configuration list for PBXProject "DartNativeDemo" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 15FFDE7A28F55FCD00477FCC;
+			productRefGroup = 15FFDE8428F55FCD00477FCC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				15FFDE8228F55FCD00477FCC /* DartNativeDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		15FFDE8128F55FCD00477FCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15FFDE9328F55FCE00477FCC /* LaunchScreen.storyboard in Resources */,
+				15FFDE9028F55FCE00477FCC /* Assets.xcassets in Resources */,
+				15FFDE8E28F55FCD00477FCC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		182C953A158BEE7CA5E3DA5F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DartNativeDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B883FC40C231AF596AAF68EC /* [CP-User] Run Flutter Build flutter_module Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] Run Flutter Build flutter_module Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../flutter_module/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+		};
+		ECAFE546794D372F60743D8F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DartNativeDemo/Pods-DartNativeDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DartNativeDemo/Pods-DartNativeDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DartNativeDemo/Pods-DartNativeDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15FFDE7F28F55FCD00477FCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15FFDEA528F584D700477FCC /* CommonService.swift in Sources */,
+				15FFDE9F28F56C0A00477FCC /* DoubleFlutterViewController.swift in Sources */,
+				15FFDE9D28F56BB600477FCC /* DataModel.swift in Sources */,
+				15FFDE8B28F55FCD00477FCC /* ViewController.swift in Sources */,
+				15FFDE9B28F56B5200477FCC /* SingleFlutterViewController.swift in Sources */,
+				15FFDE8728F55FCD00477FCC /* AppDelegate.swift in Sources */,
+				15FFDE8928F55FCD00477FCC /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		15FFDE8C28F55FCD00477FCC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15FFDE8D28F55FCD00477FCC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		15FFDE9128F55FCE00477FCC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15FFDE9228F55FCE00477FCC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		15FFDE9528F55FCE00477FCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		15FFDE9628F55FCE00477FCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		15FFDE9828F55FCE00477FCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BA554EB9C5C993381AE180B /* Pods-DartNativeDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2RA5LSHPUJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DartNativeDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DartNativeDemo.DartNativeDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		15FFDE9928F55FCE00477FCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B422FBC9F512A0E618580D7D /* Pods-DartNativeDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2RA5LSHPUJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DartNativeDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DartNativeDemo.DartNativeDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15FFDE7E28F55FCD00477FCC /* Build configuration list for PBXProject "DartNativeDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15FFDE9528F55FCE00477FCC /* Debug */,
+				15FFDE9628F55FCE00477FCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15FFDE9728F55FCE00477FCC /* Build configuration list for PBXNativeTarget "DartNativeDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15FFDE9828F55FCE00477FCC /* Debug */,
+				15FFDE9928F55FCE00477FCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 15FFDE7B28F55FCD00477FCC /* Project object */;
+}
