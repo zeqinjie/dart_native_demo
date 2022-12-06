@@ -1,7 +1,7 @@
 /*
  * @Author: zhengzeqin
  * @Date: 2022-10-12 09:42:43
- * @LastEditTime: 2022-12-05 23:28:44
+ * @LastEditTime: 2022-12-06 15:50:54
  * @Description: your project
  */
 import 'package:flutter/material.dart';
@@ -10,6 +10,7 @@ import 'package:flutter_module/chat_list.dart';
 import 'package:flutter_module/client.dart';
 import 'package:flutter_module/service/common_service.dart';
 import 'package:flutter_module/tool/tool.dart';
+import 'package:flutter_module/user_list.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key, required this.color});
@@ -116,14 +117,14 @@ class _MyHomePageState extends State<MyHomePage> with ClientDelegate {
               },
               child: const Text('Next'),
             ),
-            // TextButton(
-            //   onPressed: () {
-            //     Navigator.of(context).push(MaterialPageRoute(
-            //       builder: (context) => const UserListPage(),
-            //     ));
-            //   },
-            //   child: const Text('UserListPage'),
-            // ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const UserListPage(),
+                ));
+              },
+              child: const Text('UserListPage'),
+            ),
             TextButton(
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(
