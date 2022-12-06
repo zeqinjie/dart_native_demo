@@ -16,7 +16,6 @@ class UserListPage extends StatefulWidget {
 class _UserListPageState extends State<UserListPage> {
   String userName = '';
   String jsonString = '';
-  int? _counter = 0;
   late MethodChannel _channel;
   Isar? userIsar;
   @override
@@ -24,16 +23,6 @@ class _UserListPageState extends State<UserListPage> {
     super.initState();
     initListen();
     _channel = const MethodChannel('multiple-flutters');
-    _channel.setMethodCallHandler((call) async {
-      if (call.method == "setCount") {
-        // A notification that the host platform's data model has been updated.
-        setState(() {
-          _counter = call.arguments as int?;
-        });
-      } else {
-        throw Exception('not implemented ${call.method}');
-      }
-    });
   }
 
   @override
@@ -98,7 +87,7 @@ class _UserListPageState extends State<UserListPage> {
               ),
               TextButton(
                 onPressed: () {
-                  _channel.invokeMethod<void>("next", _counter);
+                  _channel.invokeMethod<void>("next", 1);
                 },
                 child: const Text('Next'),
               ),
@@ -182,7 +171,11 @@ class _UserListPageState extends State<UserListPage> {
   Future<Isar> fetchIsar() async {
     final userIsar = Isar.getInstance(UserSchema.name);
     if (userIsar == null) {
-      final isar = await Isar.open([UserSchema], name: UserSchema.name);
+      final isar = await Isar.open(
+        [UserSchema],
+        maxSizeMiB: 10,
+        name: UserSchema.name,
+      );
       return isar;
     }
     this.userIsar = userIsar;

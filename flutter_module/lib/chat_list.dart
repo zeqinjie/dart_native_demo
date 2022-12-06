@@ -102,7 +102,7 @@ class _ChatListPageState extends State<ChatListPage> {
     return Container(
       alignment: Alignment.center,
       height: 30,
-      child: Text('uid: ${model.uid} ; name: ${model.nickname}'),
+      child: Text('id: ${model.uid} ; name: ${model.nickname}'),
     );
   }
 
@@ -134,8 +134,11 @@ class _ChatListPageState extends State<ChatListPage> {
   Future<Isar> fetchIsar() async {
     final userIsar = Isar.getInstance(ChatModelSchema.name);
     if (userIsar == null) {
-      final isar =
-          await Isar.open([ChatModelSchema], name: ChatModelSchema.name);
+      final isar = await Isar.open(
+        [ChatModelSchema],
+        name: ChatModelSchema.name,
+        maxSizeMiB: 2000,
+      );
       return isar;
     }
     this.userIsar = userIsar;
