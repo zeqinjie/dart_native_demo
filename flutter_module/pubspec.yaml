@@ -34,7 +34,7 @@ dependencies:
 
   dart_native_gen: ^0.3.3
 
-  dart_native: ^0.7.9
+  dart_native: ^0.7.11
   
   
 
