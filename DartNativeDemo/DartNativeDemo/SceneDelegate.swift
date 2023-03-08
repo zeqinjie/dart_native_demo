@@ -13,10 +13,34 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+//        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
+//        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
+//        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+//        guard let _ = (scene as? UIWindowScene) else { return }
+        
+        guard let winScene = (scene as? UIWindowScene)
+        else {
+            return
+        }
+        
+        let nav1 = createFlutterPage()
+        let nav2 = createFlutterPage()
+        let tabbarVc = UITabBarController()
+        tabbarVc.tabBar.tintColor = UIColor.white
+        tabbarVc.tabBar.backgroundColor = UIColor.gray
+        tabbarVc.viewControllers = [nav1, nav2]
+        let win = UIWindow(windowScene: winScene)
+        win.rootViewController = tabbarVc
+        win.makeKeyAndVisible()
+        window = win
+    }
+    
+    func createFlutterPage() -> UINavigationController {
+        let vc = SingleFlutterViewController(withEntrypoint: nil)
+        let nav = UINavigationController(rootViewController: vc)
+        nav.tabBarItem.title = "Test"
+        nav.tabBarItem.image = UIImage(systemName: "house")
+        return nav
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

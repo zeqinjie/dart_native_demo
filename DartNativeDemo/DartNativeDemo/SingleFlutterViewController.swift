@@ -16,7 +16,9 @@ class SingleFlutterViewController: FlutterViewController, DataModelObserver {
 
   init(withEntrypoint entryPoint: String?) {
     let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
-    let newEngine = appDelegate.engines.makeEngine(withEntrypoint: entryPoint, libraryURI: nil)
+    let options = FlutterEngineGroupOptions()
+    options.entrypointArgs = ["http://www.baidu.com"]
+    let newEngine = appDelegate.engines.makeEngine(with: options)
     GeneratedPluginRegistrant.register(with: newEngine)
     super.init(engine: newEngine, nibName: nil, bundle: nil)
     DataModel.shared.addObserver(observer: self)
