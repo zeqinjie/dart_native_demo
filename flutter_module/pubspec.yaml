@@ -20,14 +20,14 @@ version: 1.0.0+1
 environment:
   sdk: ">=2.17.6 <3.0.0"
 
-isar_version: &isar_version 3.0.5 # define the version to be used
+# isar_version: &isar_version 3.0.5 # define the version to be used
 
 dependencies:
   flutter:
     sdk: flutter
 
-  isar: *isar_version
-  isar_flutter_libs: *isar_version
+  # isar: *isar_version
+  # isar_flutter_libs: *isar_version
   
   # dart_native: ^0.7.3
   # dart_native_gen: ^0.3.2
@@ -47,7 +47,7 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^2.0.0
 
-  isar_generator: *isar_version
+  # isar_generator: *isar_version
   build_runner: any
 
 # For information on the generic Dart part of this file, see the
