@@ -1,0 +1,51 @@
+PODS:
+  - ClassWrittenInSwift (0.0.5)
+  - dart_native (0.0.1):
+    - ClassWrittenInSwift (~> 0.0.5)
+    - Flutter
+  - Flutter (1.0.0)
+  - FlutterPluginRegistrant (0.0.1):
+    - dart_native
+    - Flutter
+    - google_maps_flutter_ios
+  - google_maps_flutter_ios (0.0.1):
+    - Flutter
+    - GoogleMaps
+  - GoogleMaps (5.2.0):
+    - GoogleMaps/Maps (= 5.2.0)
+  - GoogleMaps/Base (5.2.0)
+  - GoogleMaps/Maps (5.2.0):
+    - GoogleMaps/Base
+
+DEPENDENCIES:
+  - dart_native (from `.symlinks/plugins/dart_native/ios`)
+  - Flutter (from `Flutter`)
+  - FlutterPluginRegistrant (from `Flutter/FlutterPluginRegistrant`)
+  - google_maps_flutter_ios (from `.symlinks/plugins/google_maps_flutter_ios/ios`)
+
+SPEC REPOS:
+  trunk:
+    - ClassWrittenInSwift
+    - GoogleMaps
+
+EXTERNAL SOURCES:
+  dart_native:
+    :path: ".symlinks/plugins/dart_native/ios"
+  Flutter:
+    :path: Flutter
+  FlutterPluginRegistrant:
+    :path: Flutter/FlutterPluginRegistrant
+  google_maps_flutter_ios:
+    :path: ".symlinks/plugins/google_maps_flutter_ios/ios"
+
+SPEC CHECKSUMS:
+  ClassWrittenInSwift: 84b95c3ec2633b0a18ffdcabf8365a5833a2154c
+  dart_native: a9824de4c77f34e6a27da6d8eb21784efd5512c7
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  FlutterPluginRegistrant: 5c029cc309604c4e839e7f094a4f6e24cdecb888
+  google_maps_flutter_ios: 3e0b99383a8003b8169d06e7e324170bd0424105
+  GoogleMaps: 025272d5876d3b32604e5c080dc25eaf68764693
+
+PODFILE CHECKSUM: f23cdaf6df7581c877bdc345e211b5b99c6b6f59
+
+COCOAPODS: 1.11.3

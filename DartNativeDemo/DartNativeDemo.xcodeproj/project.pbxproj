@@ -117,6 +117,7 @@
 				15FFDE8128F55FCD00477FCC /* Resources */,
 				ECAFE546794D372F60743D8F /* [CP] Embed Pods Frameworks */,
 				9B2FAD6BA5B2ECDD4AEDC85E /* [CP-User] Embed Flutter Build flutter_module Script */,
+				B37714478EF7A35918029E8C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -215,6 +216,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../flutter_module/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh embed_and_thin";
+		};
+		B37714478EF7A35918029E8C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DartNativeDemo/Pods-DartNativeDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DartNativeDemo/Pods-DartNativeDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DartNativeDemo/Pods-DartNativeDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		ECAFE546794D372F60743D8F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

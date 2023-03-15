@@ -23,10 +23,19 @@ class $AssetsJsonGen {
   String get largeFile => 'assets/json/large_file.json';
 }
 
+class $AssetsPicGen {
+  const $AssetsPicGen();
+
+  /// File path: assets/pic/location_marker.png
+  AssetGenImage get locationMarker =>
+      const AssetGenImage('assets/pic/location_marker.png');
+}
+
 class Assets {
   Assets._();
 
   static const $AssetsJsonGen json = $AssetsJsonGen();
+  static const $AssetsPicGen pic = $AssetsPicGen();
 }
 
 class AssetGenImage extends AssetImage {

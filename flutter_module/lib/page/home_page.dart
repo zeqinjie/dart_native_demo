@@ -6,7 +6,8 @@
  */
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_module/client.dart';
+import 'package:flutter_module/client/client.dart';
+import 'package:flutter_module/page/map_page.dart';
 import 'package:flutter_module/service/common_service.dart';
 import 'package:flutter_module/tool/tool.dart';
 
@@ -114,6 +115,17 @@ class _MyHomePageState extends State<MyHomePage> with ClientDelegate {
                 _channel.invokeMethod<void>("next", _counter);
               },
               child: const Text('Next'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const MapPage(),
+                  ),
+                );
+              },
+              child: const Text('Map Page'),
             ),
           ],
         ),

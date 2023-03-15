@@ -3,8 +3,8 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_module/client.dart';
-import 'package:flutter_module/home.dart';
+import 'package:flutter_module/client/client.dart';
+import 'package:flutter_module/page/home_page.dart';
 
 void main() {
   Client.instance.init();

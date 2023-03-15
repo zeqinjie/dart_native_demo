@@ -1,0 +1,62 @@
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+flutter_module/.android/
+flutter_module/.ios/
+flutter_module/.dart_tool/
+flutter_module/.fvm/
+
+## Custom
+DartNativeDemo/Pods/
+DartNativeDemo/.idea/
+DartNativeDemo/**/*.pyc
+
+flutter_module/ios/Pods/
+flutter_module/ios/.idea/
+flutter_module/ios/**/*.pyc
+## Build generated
+build/
+DerivedData
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+
+## Other
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+
+# CocoaPods
+#
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
+#
+# Pods/
+
+# Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+# Carthage/Checkouts
+
+Carthage/Build
+
+# flutter_module/  
+.run_with_build
+.run_without_build.log
+.run_with_build_env
+flutter_module/ios/.symlinks/plugins/

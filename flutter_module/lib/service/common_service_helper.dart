@@ -5,7 +5,7 @@
  * @Description: your project
  */
 import 'dart:convert';
-import 'package:flutter_module/client.dart';
+import 'package:flutter_module/client/client.dart';
 import 'package:flutter_module/tool/log.dart';
 import 'package:flutter_module/service/common_service_result_model.dart';
 

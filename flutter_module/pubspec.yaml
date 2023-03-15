@@ -18,7 +18,7 @@ description: A new Flutter module project.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.17.6 <3.0.0"
+  sdk: '>=2.17.6 <3.0.0'
 
 # isar_version: &isar_version 3.0.5 # define the version to be used
 
@@ -28,15 +28,16 @@ dependencies:
 
   # isar: *isar_version
   # isar_flutter_libs: *isar_version
-  
+
   # dart_native: ^0.7.3
   # dart_native_gen: ^0.3.2
 
   dart_native_gen: ^0.3.3
 
   dart_native: ^0.7.11
-  
-  
+
+  # 谷歌地圖 固定
+  google_maps_flutter: 2.2.5
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -60,8 +61,9 @@ flutter:
   uses-material-design: true
 
   assets:
-  - assets/
-  - assets/json/
+    - assets/
+    - assets/json/
+    - assets/pic/
 
   module:
     androidX: true
