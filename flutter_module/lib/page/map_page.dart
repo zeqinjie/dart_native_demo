@@ -122,7 +122,7 @@ class _MapPageState extends State<MapPage> {
   Future<void> addLocationMarker() async {
     MarkerId markerId = const MarkerId("marker-location");
     try {
-      final icon = await createBitmapImageFromAsset(
+      final icon = await createBitmapImageFromBytes(
         Assets.pic.locationMarker.path,
         const Size(64, 64),
       );
