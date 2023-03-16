@@ -7,7 +7,13 @@
     {
       "name": "flutter_module",
       "request": "launch",
-      "type": "dart"
+      "type": "dart",
+      "args": [
+        "--local-engine-src-path",
+        "/Users/zhengzeqin/Desktop/engine/src",
+        "--local-engine",
+        "ios_debug_unopt"
+      ]
     },
     {
       "name": "flutter_module (profile mode)",

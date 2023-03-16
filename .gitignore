@@ -60,3 +60,5 @@ Carthage/Build
 .run_without_build.log
 .run_with_build_env
 flutter_module/ios/.symlinks/plugins/
+flutter_module/.flutter-plugins
+flutter_module/.flutter-plugins-dependencies

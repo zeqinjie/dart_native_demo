@@ -41,6 +41,14 @@ class _MapPageState extends State<MapPage> {
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Google Map Demo'),
+          leading: IconButton(
+            icon: const Icon(
+              Icons.arrow_back_ios,
+            ),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
         ),
         body: Stack(
           alignment: Alignment.center,
@@ -101,42 +109,6 @@ class _MapPageState extends State<MapPage> {
     );
   }
 
-  ///创建位图
-  Future<BitmapDescriptor> createBitmapImage(
-    String imageName,
-    Size size,
-  ) async {
-    Size imageSize = Size(size.width, size.height);
-    final ui.PictureRecorder pictureRecorder = ui.PictureRecorder();
-    final Canvas canvas = Canvas(pictureRecorder);
-
-    // 画location图
-    ui.Image locationImage = await getImageFromPath(imageName);
-    paintImage(
-        canvas: canvas,
-        image: locationImage,
-        rect: Rect.fromLTRB(
-          0,
-          0,
-          imageSize.width,
-          imageSize.height,
-        ),
-        fit: BoxFit.fill);
-
-    final img = await pictureRecorder.endRecording().toImage(
-          imageSize.width.toInt(),
-          imageSize.height.toInt(),
-        );
-    final data = await img.toByteData(format: ui.ImageByteFormat.png);
-    final Uint8List uint8List = data!.buffer.asUint8List();
-    return BitmapDescriptor.fromBytes(uint8List);
-    // final icon = await BitmapDescriptor.fromAssetImage(
-    //   ImageConfiguration(size: size),
-    //   imageName,
-    // );
-    // return icon;
-  }
-
   ///根据路径返回图片
   Future<ui.Image> getImageFromPath(String asset, {width, height}) async {
     ByteData data = await rootBundle.load(asset);
@@ -150,7 +122,7 @@ class _MapPageState extends State<MapPage> {
   Future<void> addLocationMarker() async {
     MarkerId markerId = const MarkerId("marker-location");
     try {
-      final icon = await createBitmapImage(
+      final icon = await createBitmapImageFromAsset(
         Assets.pic.locationMarker.path,
         const Size(64, 64),
       );
@@ -165,7 +137,59 @@ class _MapPageState extends State<MapPage> {
         mapState.markers[markerId] = marker;
       });
     } catch (e) {
-      TWLog('error ====> $e');
+      // TWLog('error ====> $e');
+    }
+  }
+
+  /// create from byte
+  Future<BitmapDescriptor> createBitmapImageFromBytes(
+    String imageName,
+    Size size,
+  ) async {
+    TWLog('imageName ===> $imageName');
+    try {
+      final ui.PictureRecorder pictureRecorder = ui.PictureRecorder();
+      final Canvas canvas = Canvas(pictureRecorder);
+      ui.Image locationImage = await getImageFromPath(imageName);
+      paintImage(
+          canvas: canvas,
+          image: locationImage,
+          rect: Rect.fromLTRB(
+            0,
+            0,
+            size.width,
+            size.height,
+          ),
+          fit: BoxFit.fill);
+
+      final img = await pictureRecorder.endRecording().toImage(
+            size.width.toInt(),
+            size.height.toInt(),
+          );
+      final data = await img.toByteData(format: ui.ImageByteFormat.png);
+      final Uint8List uint8List = data!.buffer.asUint8List();
+      return BitmapDescriptor.fromBytes(uint8List);
+    } catch (e) {
+      TWLog('Error createBitmapImageFromBytes $e');
+      rethrow;
+    }
+  }
+
+  /// create from asset
+  Future<BitmapDescriptor> createBitmapImageFromAsset(
+    String imageName,
+    Size size,
+  ) async {
+    TWLog('imageName ===> $imageName');
+    try {
+      final icon = await BitmapDescriptor.fromAssetImage(
+        ImageConfiguration(size: size),
+        imageName,
+      );
+      return icon;
+    } catch (e) {
+      TWLog('Error createBitmapImageFromAsset $e');
+      rethrow;
     }
   }
 }
