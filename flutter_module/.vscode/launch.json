@@ -26,6 +26,17 @@
       "request": "launch",
       "type": "dart",
       "flutterMode": "release"
+    },
+    {
+      "name": "flutter_module (attach mode)",
+      "request": "attach",
+      "type": "dart",
+      "args": [
+        "--local-engine-src-path",
+        "/Users/zhengzeqin/Desktop/engine/src",
+        "--local-engine",
+        "ios_debug_unopt"
+      ]
     }
   ]
 }
