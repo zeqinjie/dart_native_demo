@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../../../engine/src/out/ios_debug_unopt/flutter_engine.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:DartNativeDemo.xcodeproj">
    </FileRef>
    <FileRef
