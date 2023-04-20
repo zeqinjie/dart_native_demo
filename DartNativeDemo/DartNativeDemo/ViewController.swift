@@ -23,6 +23,7 @@ class ViewController: UIViewController, DataModelObserver {
 
     override func viewDidLoad() {
       super.viewDidLoad()
+      self.view.backgroundColor = .white
       DataModel.shared.addObserver(observer: self)
       onCountUpdate(newCount: DataModel.shared.count)
     }

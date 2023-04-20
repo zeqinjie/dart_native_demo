@@ -50,12 +50,15 @@ class _MapPageState extends State<MapPage> {
             },
           ),
         ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+        ),
         body: Stack(
           alignment: Alignment.center,
           children: [
             buildGoogleMapView(
               context,
-            )
+            ),
           ],
         ),
       ),
@@ -122,7 +125,7 @@ class _MapPageState extends State<MapPage> {
   Future<void> addLocationMarker() async {
     MarkerId markerId = const MarkerId("marker-location");
     try {
-      final icon = await createBitmapImageFromBytes(
+      final icon = await createBitmapImageFromAsset(
         Assets.pic.locationMarker.path,
         const Size(64, 64),
       );
