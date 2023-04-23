@@ -23,28 +23,29 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return
         }
         
-        let nav1 = createFlutterPage()
-        let nav3 = createPage()
+        let nav1 = createNativePage()
+        let nav2 = createFlutterPage()
+        let nav3 = createFlutterPage(params: ["initialRoute":"map"])
         
         let tabbarVc = UITabBarController()
         tabbarVc.tabBar.tintColor = UIColor.white
         tabbarVc.tabBar.backgroundColor = UIColor.gray
-        tabbarVc.viewControllers = [nav1,  nav3]
+        tabbarVc.viewControllers = [nav1,  nav2, nav3]
         let win = UIWindow(windowScene: winScene)
         win.rootViewController = tabbarVc
         win.makeKeyAndVisible()
         window = win
     }
     
-    func createFlutterPage() -> UINavigationController {
-        let vc = SingleFlutterViewController(withEntrypoint: nil)
+    func createFlutterPage(params: [String:Any] = [:]) -> UINavigationController {
+        let vc = SingleFlutterViewController(withEntrypoint: nil, params: params)
         let nav = UINavigationController(rootViewController: vc)
         nav.tabBarItem.title = "Test"
         nav.tabBarItem.image = UIImage(systemName: "house")
         return nav
     }
     
-    func createPage() -> UINavigationController {
+    func createNativePage() -> UINavigationController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "NativeViewCount")
         let nav = UINavigationController(rootViewController: vc)

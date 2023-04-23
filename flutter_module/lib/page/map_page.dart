@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_module/extension/string_ext.dart';
 import 'package:flutter_module/gen/assets.gen.dart';
 import 'package:flutter_module/tool/log.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -34,33 +33,28 @@ class _MapPageState extends State<MapPage> {
   final mapState = MapState();
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Google Map Demo'),
-          leading: IconButton(
-            icon: const Icon(
-              Icons.arrow_back_ios,
-            ),
-            onPressed: () {
-              Navigator.pop(context);
-            },
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Google Map Demo'),
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back_ios,
           ),
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-        ),
-        body: Stack(
-          alignment: Alignment.center,
-          children: [
-            buildGoogleMapView(
-              context,
-            ),
-          ],
-        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+      ),
+      body: Stack(
+        alignment: Alignment.center,
+        children: [
+          buildGoogleMapView(
+            context,
+          ),
+        ],
       ),
     );
   }
@@ -68,8 +62,16 @@ class _MapPageState extends State<MapPage> {
   @override
   void initState() {
     super.initState();
+    addLocation();
+  }
 
-    addLocationMarker();
+  void addLocation() {
+    Future.delayed(const Duration(microseconds: 500)).then((value) {
+      for (var i = 0; i <= 100; i++) {
+        TWLog('加载大头针...$i');
+        addLocationMarker();
+      }
+    });
   }
 
   /// 谷歌地图
@@ -121,18 +123,21 @@ class _MapPageState extends State<MapPage> {
     return fi.image;
   }
 
-  ///添加建案定位大头针
+  /// 定位大头针
   Future<void> addLocationMarker() async {
     MarkerId markerId = const MarkerId("marker-location");
     try {
-      final icon = await createBitmapImageFromAsset(
+      final icon = await createBitmapImageFromBytes(
         Assets.pic.locationMarker.path,
         const Size(64, 64),
       );
       TWLog('marker ====> $icon');
       var marker = Marker(
         markerId: markerId,
-        position: LatLng(mapState.lat, mapState.lng),
+        position: LatLng(
+          mapState.lat,
+          mapState.lng,
+        ),
         icon: icon,
       );
 

@@ -11,37 +11,37 @@ import 'package:flutter_module/page/map_page.dart';
 import 'package:flutter_module/service/common_service.dart';
 import 'package:flutter_module/tool/tool.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key, required this.color});
+// class HomePage extends StatelessWidget {
+//   const HomePage({super.key, required this.color});
 
-  final MaterialColor color;
+//   final MaterialColor color;
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: color,
-      ),
-      home: MyHomePage(
-        title: CommonService.shared.delegate.getTitle() ?? 'Flutter Page',
-      ),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'Flutter Demo',
+//       theme: ThemeData(
+//         primarySwatch: color,
+//       ),
+//       home: HomePageContent(
+//         title: CommonService.shared.delegate.getTitle() ?? 'Flutter Page',
+//       ),
+//     );
+//   }
+// }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key, required this.title});
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> with ClientDelegate {
+class _HomePageState extends State<HomePage> with ClientDelegate {
   int? _counter = 0;
   late MethodChannel _channel;
-  String _title = 'You have pushed the button this many times123:';
+  String _title = 'You have pushed the button this many times:';
   late String _id;
 
   @override

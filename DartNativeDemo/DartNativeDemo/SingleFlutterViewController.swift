@@ -14,10 +14,12 @@ import Foundation
 class SingleFlutterViewController: FlutterViewController, DataModelObserver {
   private var channel: FlutterMethodChannel?
 
-  init(withEntrypoint entryPoint: String?) {
+    init(withEntrypoint entryPoint: String?, params: [String:Any] = [:]) {
     let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     let options = FlutterEngineGroupOptions()
-    options.entrypointArgs = ["http://www.baidu.com"]
+    if let jsonString = params.toJSON() {
+        options.entrypointArgs = [jsonString]
+    }
     let newEngine = appDelegate.engines.makeEngine(with: options)
     GeneratedPluginRegistrant.register(with: newEngine)
     super.init(engine: newEngine, nibName: nil, bundle: nil)
@@ -62,4 +64,15 @@ class SingleFlutterViewController: FlutterViewController, DataModelObserver {
       }
     }
   }
+}
+
+
+extension Dictionary {
+    func toJSON() -> String? {
+        if let jsonData = try? JSONSerialization.data(withJSONObject: self, options: JSONSerialization.WritingOptions()) {
+            let jsonStr = String(data: jsonData, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
+            return String(jsonStr ?? "")
+        }
+        return nil
+    }
 }
